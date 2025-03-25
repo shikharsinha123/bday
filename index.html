@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Celebration</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="c"></canvas>
+
+      <div class="controls">
+        <button id="musicToggle" class="control-btn">
+          <i class="fas fa-music"></i>
+        </button>
+        <button id="fireworkBtn" class="control-btn">
+          <i class="fas fa-wand-sparkles"></i>
+        </button>
+        <button id="customizeBtn" class="control-btn">
+          <i class="fas fa-magic"></i>
+        </button>
+      </div>
+
+      <div id="customizePanel" class="customize-panel">
+        <div class="panel-content">
+          <h3>Customize Message</h3>
+          <div class="input-group">
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" value="REETHU" />
+          </div>
+          <div class="input-group">
+            <label for="messageInput">Custom Message:</label>
+            <input type="text" id="messageInput" value="HAPPY BIRTHDAY!" />
+          </div>
+          <div class="input-group">
+            <label for="colorTheme">Color Theme:</label>
+            <select id="colorTheme">
+              <option value="default">Colorful</option>
+              <option value="pastel">Pastel</option>
+              <option value="neon">Neon</option>
+              <option value="gold">Gold & Silver</option>
+              <option value="ocean">Ocean</option>
+              <option value="sunset">Sunset</option>
+              <option value="floral">Floral</option>
+              <option value="monochrome">Monochrome</option>
+            </select>
+          </div>
+          <button id="applyBtn" class="apply-btn">Apply Changes</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Click anywhere to create more fireworks! 🎉</p>
+      <!-- <p class="credits">
+        Made with ❤️ for <span id="nameDisplay">Reethu</span>
+      </p> -->
+      <p class="credits">
+        A little joy for your special day, <span id="nameDisplay">Reethu</span>
+      </p>
+    </div>
+
+    <audio id="bgMusic" loop>
+      <source
+        src="soft-piano-melody-relaxing-instrumental-music-305885.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+    <audio id="fireworkSound">
+      <source
+        src="https://www.soundjay.com/mechanical/sounds/firework-explosion-1.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+
+    <script src="app.js"></script>
+  </body>
+</html>
